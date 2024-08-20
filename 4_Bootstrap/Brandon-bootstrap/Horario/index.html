@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans&display=swap" >
+    <script src="https://kit.fontawesome.com/1da5200486.js" crossorigin="anonymous"></script>
+    <style>
+      .cabecera {
+        background: orange;
+      }
+      .custom-search-input {
+        width: 650px;
+        background-color: black;
+      }
+      .cuerpo {
+          height: 650px;
+          text-align: center;
+      }
+      .custom-heading {
+        color: white;
+      }
+      
+
+      .cuerpo h1 {
+        color: white;
+        font-weight: bold;
+        display: inline-block;
+      }  
+
+      .cuerpo p {
+        font-size: smaller;
+        color: rgba(255, 255, 255, 0.7);
+        display: inline-block;
+      }
+      .mapa {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+
+
+      }
+      body {
+        background: linear-gradient(130deg, #800000 10%, #000000 50%, #993d00 100%);
+      }
+
+      svg {
+        position: absolute; /*para que el fondo animado sea como marcar de agua permite poner cosas encima*/
+        opacity: 0.6; /*esto da transparecia a las olas*/
+        height: 750px; /*posiciĂłn de las olas */
+      }
+      .final img {
+        width: 60px;
+        height: 60px;
+      }
+
+      .final h4 {
+        color: orange;
+      }
+      .final {
+        background: orange;
+      }
+      h1, h3 {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    p {
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    </style>
+  </head>
+  <body>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" style="z-index: -1;">
+    <defs>
+      <linearGradient id="bg">
+        <stop offset="0%" style="stop-color:rgba(0, 0, 0, 0.06)"></stop>
+        <stop offset="50%" style="stop-color:rgba(255, 0, 0, 0.6)"></stop>
+        <stop offset="100%" style="stop-color:rgba(255, 165, 0, 0.2)"></stop>
+      </linearGradient>
+      <path id="wave" fill="url(#bg)" d="M-363.852,502.589c0,0,236.988-41.997,505.475,0s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v560.106H-363.852V502.589z" />
+    </defs>
+    <g>
+      <use xlink:href='#wave' opacity=".3">
+        <animateTransform
+          attributeName="transform"
+          attributeType="XML"
+          type="translate"
+          dur="10s"
+          calcMode="spline"
+          values="270 230; -334 180; 270 230"
+          keyTimes="0; .5; 1"
+          keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+          repeatCount="indefinite" />
+      </use>
+      <use xlink:href='#wave' opacity=".6">
+        <animateTransform
+          attributeName="transform"
+          attributeType="XML"
+          type="translate"
+          dur="8s"
+          calcMode="spline"
+          values="-270 230;243 220;-270 230"
+          keyTimes="0; .6; 1"
+          keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+          repeatCount="indefinite" />
+      </use>
+      <use xlink:href='#wave' opacty=".9">
+        <animateTransform
+          attributeName="transform"
+          attributeType="XML"
+          type="translate"
+          dur="6s"
+          calcMode="spline"
+          values="0 230;-140 200;0 230"
+          keyTimes="0; .4; 1"
+          keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+          repeatCount="indefinite" />
+      </use>
+    </g>
+  </svg>
+    <div class="cabecera">
+      <div class="container">
+        <div class="row">
+          <div class="col-2 mt-2">
+            <img src="Imagenes/logo-removebg-preview.png" style="width: 90px; height: 60px;">
+          </div>
+          <div class="col-5 mt-3">
+          <ul class="list-inline">
+            <li class="list-inline-item">
+            <input type="search" class="form-control form-control-dark text-bg-white custom-search-input" placeholder="Buscar Producto..." aria-label="Search">
+            </li>                  
+          </ul>
+        </div>
+        <div class="col-5 mt-3">
+          <ul class="list-inline text-end">
+            <button type="button" class="btn btn-outline-light me-2">Iniciar Sesión</button>
+            <button type="button" class="btn btn-warning">Registrarse</button>
+            <img src="Imagenes/CarritoDeCompras.png" style="width: 60px; height: 40px;">
+          </ul>
+        </div>
+        </div>
+      </div> 
+    </div>
+
+    <div class="cuerpo">
+      
+      <div class="container-fluid">
+    <div class="row">
+      <div class="col mt-3">
+        <h1 class="text-center custom-heading">HORARIO DE ATENCIÓN</h1>
+        <h3 class="text-center custom-heading">8 AM - 10 PM</h3>
+      <div class="cuerpo">
+        
+      <div class="cuerpo">
+        <div class="mapa">
+
+          <iframe style="margin-left: 25%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d915.6122627643878!2d-77.01118191618676!3d-12.000952094614863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105cffcd7c2b749%3A0x1c662fa76ba1b7c4!2sTech%20System%20Engineering!5e1!3m2!1ses!2spe!4v1685163163467!5m2!1ses!2spe" width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <h1>UBICACIÓN</h1>
+        <p>CALLE LOS PÁJAROS 123, LOTE 4,<br>CIUDADES DE LAS FLORES, LIMA PERÚ</p>
+      </div>
+        
+      </div>
+      </div>
+      </div>
+    </div>
+</div>
+    </div>
+
+    <div class="final">
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-4">
+                <ul class="align-items-center d-flex flex-column">
+                    <h4 class="fw-bolder">Contáctanos</h4>
+                    <p><strong>Horarios de Atención</strong></p>
+                    <p><strong>Ubicación</strong></p>
+                </ul>
+            </div>
+
+            <div class="col-4">
+                <ul class="align-items-center d-flex flex-column">
+                    <h4 class="fw-bolder">Blog</h4>
+                    <p><strong>Consejos de Cocina</strong></p>
+                    <p><strong>Consejos de Limpieza</strong></p>
+                    <p><strong>Novedades de Productos</strong></p>
+                </ul>
+            </div>
+
+            <div class="col-4">
+                <ul class="align-items-center d-flex flex-column">
+                    <h4 class="fw-bolder">Redes sociales</h4>
+                    <ul>
+                        <img src="Imagenes/whatsapp.png" alt="Imagen" class="rounded-circle">
+                        <img src="Imagenes/facebook.png" alt="Imagen" class="rounded-circle">
+                        <img src="Imagenes/gorjeo.png" alt="Imagen" class="rounded-circle">
+                    </ul>
+                </ul>
+                
+            </div>
+        </div>
+        
+    </div><!--fin container-->
+</div><!--fin final-->
+  
+
+  
+  
+  
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet"> 
+    <style>
+        .cabecera {
+            background: orange;
+        }
+
+
+        .cuerpo {
+          height: 650px;
+        }
+
+        .vertical-text {
+            transform: rotate(-90deg);
+            position: absolute;
+            left: 90px;
+            top: 80%;
+            transform-origin: 0 0;
+            font-size: 24px;
+            white-space: nowrap;
+            color: #ffffff; /* Cambia esto al color que prefieras. */
+            font-size: 40px; /* Ajusta esto al tamaño que prefieras. */
+            text-decoration: underline; /* Esto subrayará el texto. */
+            text-decoration-color: #E87B00; /* Color del subrayado */
+            text-underline-offset: 15px; /* Distancia del subrayado al texto */
+            text-decoration-thickness: 10px; /* Grosor del subrayado */
+        }
+        
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        body {
+          background: linear-gradient(130deg, #800000 10%, #000000 50%, #993d00 100%);
+        }
+
+        svg {
+            position: fixed; /*para que el fondo animado sea como marcar de agua permite poner cosas encima*/
+            opacity: 0.6; /*esto da transparecia a las olas*/
+            height: 750px; /*posición de las olas */
+        }
+
+        /* parte final */
+
+        .final img {
+            width: 60px;
+            height: 60px;
+        }
+        .final {
+            background: orange;
+        }
+
+        .final h4{
+            color: white;
+        }
+        .cuerpo h4{
+        font-weight: bold;
+        color: skyblue;
+        }
+        .cuerpo p{
+            font-family: 'Dancing Script', cursive;
+        }
+
+        
+
+    </style>
+  <title>Receta de Macarrones de Pollo</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    .recipe-img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" style="z-index: -1;">
+    <defs>
+      <linearGradient id="bg">
+        <stop offset="0%" style="stop-color:rgba(0, 0, 0, 0.06)"></stop>
+        <stop offset="50%" style="stop-color:rgba(255, 0, 0, 0.6)"></stop>
+        <stop offset="100%" style="stop-color:rgba(255, 165, 0, 0.2)"></stop>
+      </linearGradient>
+      <path id="wave" fill="url(#bg)" d="M-363.852,502.589c0,0,236.988-41.997,505.475,0s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v560.106H-363.852V502.589z" />
+    </defs>
+    <g>
+      <use xlink:href='#wave' opacity=".3">
+        <animateTransform
+          attributeName="transform"
+          attributeType="XML"
+          type="translate"
+          dur="10s"
+          calcMode="spline"
+          values="270 230; -334 180; 270 230"
+          keyTimes="0; .5; 1"
+          keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+          repeatCount="indefinite" />
+      </use>
+      <use xlink:href='#wave' opacity=".6">
+        <animateTransform
+          attributeName="transform"
+          attributeType="XML"
+          type="translate"
+          dur="8s"
+          calcMode="spline"
+          values="-270 230;243 220;-270 230"
+          keyTimes="0; .6; 1"
+          keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+          repeatCount="indefinite" />
+      </use>
+      <use xlink:href='#wave' opacty=".9">
+        <animateTransform
+          attributeName="transform"
+          attributeType="XML"
+          type="translate"
+          dur="6s"
+          calcMode="spline"
+          values="0 230;-140 200;0 230"
+          keyTimes="0; .4; 1"
+          keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+          repeatCount="indefinite" />
+      </use>
+    </g>
+  </svg>
+  <div class="cabecera">
+    <div class="container align-items-center">
+      <div class="row">
+        <div class="col-3 mt-2">
+          <img src="Imagenes/logo-removebg-preview.png" style="width: 80px; height: 60px;">
+          </div>
+          <div class="col-6 mt-3">
+            <input type="search" class="form-control form-control-dark text-bg-white" placeholder="Buscar Producto..." aria-label="Search">
+          </div>
+          <div class="col-3 mt-3">
+            <ul class="list-inline text-end d-flex">
+              <button type="button" class="btn btn-outline-light me-2">Iniciar Sesion</button>
+              <button type="button" class="btn btn-warning">Registrace</button>
+              <img src="Imagenes/CarritoDeCompras.png" style="width: 60px; height: 40px;">
+            </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cuerpo">
+    <div class="container">
+        <div class="vertical-text">CONSEJOS DE LIMPIEZA</div>
+      <div class="row">
+        <div class="col-md-4 mt-5">
+            <h4  >Coloca fundas para tu mueble:</h4>
+            <hr size="8px" color="white" />
+            <p class="text-white text-justify">
+                Es difícil retirar las manchas de café, chocolate o 
+                    helado que se impregnan sobre los sillones y sofás. Hay casos
+                    en los que debes requerir de la ayuda de los maestros tapiceros 
+                    para puedas deshacerte de ellas; sin embargo, hoy puedes invertir
+                    en la compra de fundas para tus muebles, las cuales son muy fáciles
+                    de adquirir debido a que hay diversos puntos de venta que ofrecen 
+                    este producto.
+            </p>
+        </div>
+        <div class="col-md-4 mt-5">
+            <h4 >Limpia tu microondas dos veces a la semana:</h4>
+            <hr size="8px" color="white" />
+            <p class="text-white text-justify">
+                Analicemos juntos los distintos platillos gastronómicos que 
+                    elaboras durante la semana. Para poder prepararlos haces 
+                    uso de tu microondas, artefacto que se llena de grasa si 
+                    es que no lo limpias con frecuencia. Por lo tanto, te 
+                    recomendamos darles mantenimiento durante dos veces a la semana. 
+                    También, adquiere tapas para absorber la grasa de la 
+                    parte superior de los artefactos.
+            </p>
+        </div>
+        <div class="col-md-4 mt-5">
+            <h4 >Utiliza tachos de plástico:</h4>
+            <hr size="8px" color="white" />
+            <p class="text-white text-justify">
+                Enséñales a tus familiares la importancia de deshacerse de
+                     los restos de basura. Coloca tachos de plástico en la 
+                     cocina, los baños, dormitorios, bibliotecas y demás espacios 
+                     que existan en tu hogar. De esta manera, ellos también 
+                     ayudarán a mantener la casa limpia y libre de malos olores. 
+                     Además, puedes adquirir tachos de distintas presentaciones 
+                     que irán de acorde con tu decoración.
+            </p>
+        </div>
+        <div class="col-md-4 mt-5 align-items-center mb-1 d-flex flex-column justify-content-center">
+          <img src="ConsejosLim/Imagenes/sofa.jpeg" alt="Macarrones de Pollo" class="recipe-img">
+        </div>
+        <div class="col-md-4 mt-5 align-items-center mb-1 d-flex flex-column justify-content-center">
+          <img src="ConsejosLim/Imagenes/microondas.jpeg" alt="Macarrones de Pollo" class="recipe-img">
+        </div>
+        <div class="col-md-4 mt-5 align-items-center mb-1 d-flex flex-column justify-content-center">
+          <img src="ConsejosLim/Imagenes/tacho.jpeg" alt="Macarrones de Pollo" class="recipe-img">
+        </div>
+      </div>
+    </div>
+</div>
+
+  <div class="final">
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-4">
+                <ul class="align-items-center d-flex flex-column">
+                    <h4 class="fw-bolder">Contáctanos</h4>
+                    <p><strong>Horarios de Atención</strong></p>
+                    <p><strong>Ubicación</strong></p>
+                </ul>
+            </div>
+
+            <div class="col-4">
+                <ul class="align-items-center d-flex flex-column">
+                    <h4 class="fw-bolder">Blog</h4>
+                    <p><strong>Concejos de Concina</strong></p>
+                    <p><strong>Consejos de Limpieza</strong></p>
+                    <p><strong>Novedades de Producots</strong></p>
+                </ul>
+            </div>
+
+            <div class="col-4">
+                <ul class="align-items-center d-flex flex-column">
+                    <h4 class="fw-bolder">Redes sociales</h4>
+                    <ul>
+                        <img src="Imagenes/whatsapp.png" alt="Imagen" class="rounded-circle">
+                        <img src="Imagenes/facebook.png" alt="Imagen" class="rounded-circle">
+                        <img src="Imagenes/gorjeo.png" alt="Imagen" class="rounded-circle">
+                    </ul>
+                </ul>
+                
+            </div>
+        </div>
+        
+    </div><!--fin container-->
+</div><!--fin final-->
+  
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+

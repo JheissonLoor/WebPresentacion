@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/TiposProductos.css">
+    <title>Document</title>
+
+    <script>
+        function showContent(category) {
+            var items = document.getElementsByClassName('item');
+            for (var i = 0; i < items.length; i++) {
+                items[i].style.display = 'none';
+            }
+
+            var selectedContent = document.querySelectorAll('.item#' + category)
+            for (var j = 0; j < selectedContent.length; j++) {
+                selectedContent[j].style.display = 'block';
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="cabecera">
+            <div class="icono">
+                <img src="Imagenes/Iconos/logo-removebg-preview.png">
+            </div>
+            <div class="boton-busqueda">
+                <input class="cuadrosearch" type="text" placeholder="Buscar Producto...">
+                <img src="Imagenes/Iconos/lupa.png" type="submit">
+            </div>
+            <div class="botones">
+                <a href="#" onclick="abrirVentana()">Iniciar Secion</a>
+                <a href="#" onclick="abrirVentana()">Registrarse</a>
+                <img onclick="abrirVentana()"  src="Imagenes/Iconos/CarritoDeCompras.png">
+            </div>
+        </div>
+        <!--barrade navegar-->
+        <div class="barradeopciones">
+            <button class="zoomboton" onclick="showContent('alimentos')">Alimentos</button>
+            <button class="zoomboton" onclick="showContent('snakbebidas')">Snaks y Bebidas</button>
+            <button class="zoomboton" onclick="showContent('higiene')">Higiene Personal</button>
+            <button class="zoomboton" onclick="showContent('limpieza')">Limpieza del Hogar</button>
+        </div>
+
+        <!--Cuerpo-->
+        <div class="cuerpo">
+            <div class="izquierda">
+                <!--alimentos-->
+                <div class="item" id="alimentos" style="display: none;">
+                    <img src="Imagenes/Productos/alimentos/1.jpg">
+                    <button>Agregar</button>
+                </div>
+                <div class="item" id="alimentos" style="display: none;">
+                    <img src="Imagenes/Productos/alimentos/2.jpg">
+                    <button>Agregar</button>
+                </div>
+                <div class="item" id="alimentos" style="display: none;">
+                    <img src="Imagenes/Productos/alimentos/3.jpg">
+                    <button>Agregar</button>
+                </div>
+                <div class="item" id="alimentos" style="display: none;">
+                    <img src="Imagenes/Productos/alimentos/4.jpg">
+                    <button>Agregar</button>
+                </div>
+                <div class="item" id="alimentos" style="display: none;">
+                    <img src="Imagenes/Productos/alimentos/5.jpg">
+                    <button>Agregar</button>
+                </div>
+                <div class="item" id="alimentos" style="display: none;">
+                    <img src="Imagenes/Productos/alimentos/6.jpg">
+                    <button>Agregar</button>
+                </div>
+                <div class="item" id="alimentos" style="display: none;">
+                    <img src="Imagenes/Productos/alimentos/7.jpg">
+                    <button>Agregar</button>
+                </div>
+                <div class="item" id="alimentos" style="display: none;">
+                    <img src="Imagenes/Productos/alimentos/8.jpg">
+                    <button>Agregar</button>
+                </div>
+                <!--bebidas-->
+                <div class="item" id="snakbebidas" style="display: none;">
+                    <img src="Imagenes/Productos/bebidas/1.jpg">
+                    <button>Agregar</button>
+                </div>
+                <div class="item" id="snakbebidas" style="display: none;">
+                    <img src="Imagenes/Productos/bebidas/2.jpg">
+                    <button>Agregar</button>
+                </div>
+                <div class="item" id="snakbebidas" style="display: none;">
+                    <img src="Imagenes/Productos/bebidas/3.jpg">
+                    <button>Agregar</button>
+                </div>
+                <div class="item" id="snakbebidas" style="display: none;">
+                    <img src="Imagenes/Productos/bebidas/4.jpg">
+                    <button>Agregar</button>
+                </div>
+                <div class="item" id="snakbebidas" style="display: none;">
+                    <img src="Imagenes/Productos/bebidas/5.jpg">
+                    <button>Agregar</button>
+                </div>
+                <div class="item" id="snakbebidas" style="display: none;">
+                    <img src="Imagenes/Productos/bebidas/6.jpg">
+                    <button>Agregar</button>
+                </div>
+                <div class="item" id="snakbebidas" style="display: none;">
+                    <img src="Imagenes/Productos/bebidas/7.jpg">
+                    <button>Agregar</button>
+                </div>
+                <div class="item" id="snakbebidas" style="display: none;">
+                    <img src="Imagenes/Productos/bebidas/8.jpg">
+                    <button>Agregar</button>
+                </div>
+                <!--higiene personal-->
+                <div class="item" id="higiene" style="display: none;">
+                    <img src="Imagenes/Productos/higiene/1.jpg">
+                    <button>Agregar</button>
+                </div>
+                <div class="item" id="higiene" style="display: none;">
+                    <img src="Imagenes/Productos/higiene/2.jpg">
+                    <button>Agregar</button>
+                </div>
+                <div class="item" id="higiene" style="display: none;">
+                    <img src="Imagenes/Productos/higiene/3.jpg">
+                    <button>Agregar</button>
+                </div>
+                <div class="item" id="higiene" style="display: none;">
+                    <img src="Imagenes/Productos/higiene/4.jpg">
+                    <button>Agregar</button>
+                </div>
+                <div class="item" id="higiene" style="display: none;">
+                    <img src="Imagenes/Productos/higiene/5.jpg">
+                    <button>Agregar</button>
+                </div>
+                <div class="item" id="higiene" style="display: none;">
+                    <img src="Imagenes/Productos/higiene/6.jpg">
+                    <button>Agregar</button>
+                </div>
+                <div class="item" id="higiene" style="display: none;">
+                    <img src="Imagenes/Productos/higiene/7.jpg">
+                    <button>Agregar</button>
+                </div>
+                <div class="item" id="higiene" style="display: none;">
+                    <img src="Imagenes/Productos/higiene/8.jpg">
+                    <button>Agregar</button>
+                </div>
+                <!--limpieza-->
+                <div class="item" id="limpieza" style="display: none;">
+                    <img src="Imagenes/Productos/Limpieza/1.jpg">
+                    <button>Agregar</button>
+                </div>
+                <div class="item" id="limpieza" style="display: none;">
+                    <img src="Imagenes/Productos/Limpieza/2.jpg">
+                    <button>Agregar</button>
+                </div>
+                <div class="item" id="limpieza" style="display: none;">
+                    <img src="Imagenes/Productos/Limpieza/3.jpg">
+                    <button>Agregar</button>
+                </div>
+                <div class="item" id="limpieza" style="display: none;">
+                    <img src="Imagenes/Productos/Limpieza/4.jpg">
+                    <button>Agregar</button>
+                </div>
+                <div class="item" id="limpieza" style="display: none;">
+                    <img src="Imagenes/Productos/Limpieza/5.jpg">
+                    <button>Agregar</button>
+                </div>
+                <div class="item" id="limpieza" style="display: none;">
+                    <img src="Imagenes/Productos/Limpieza/6.jpg">
+                    <button>Agregar</button>
+                </div>
+                <div class="item" id="limpieza" style="display: none;">
+                    <img src="Imagenes/Productos/Limpieza/7.jpg">
+                    <button>Agregar</button>
+                </div>
+                <div class="item" id="limpieza" style="display: none;">
+                    <img src="Imagenes/Productos/Limpieza/8.jpg">
+                    <button>Agregar</button>
+                </div>
+
+            </div>
+
+            <div class="derecha">
+                <div class="sliderContenedor">
+                    <img src="Imagenes/Productos/promociones/1.jpeg">
+                    <img src="Imagenes/Productos/promociones/2.jpeg">
+                </div>
+                <!--<button class="zoombotonderecha">Promiciones</button>-->
+                <div class="sliderContenedor">
+                    <img src="Imagenes/Productos/promociones/3.jpeg">
+                    <img src="Imagenes/Productos/promociones/4.jpeg">
+                </div>
+                <button class="zoombotonderecha">Recetas</button>
+            </div>
+
+        </div>
+
+        <div class="finalPagina">
+            <div class="letras">
+                <font>CONTÁCTANOS</font>
+                <a href="#">HORARIOS DE ATENCIÓN</a>
+                <a href="#">UBICACIÓN</a>
+            </div>
+
+            <div class="letras">
+                <font>BLOG</font>
+                <a href="#">CONCEJOS DE CONCINA</a>
+                <a href="#">CONCEJO DE LIMPIEZA</a>
+                <a href="#">NOVEDADES DE PRODUCTOS</a>
+            </div>
+
+            <div class="letras">
+                <font>REDES SOCIALES</font>
+                <div class="iconos">
+                    <img src="Imagenes/facebook.png">
+                    <img src="Imagenes/gorjeo.png">
+                    <img src="Imagenes/whatsapp.png">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+ 
+
+</html>
